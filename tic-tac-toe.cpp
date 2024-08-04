@@ -76,15 +76,21 @@ bool playerinput(char *spaces, int x){
     return 1;
 }
 bool checkWin(char *spaces){
-    if(spaces[0]=='O' && spaces[3]=='O' && spaces[6]=='O') { return true;}
-    if(spaces[0]=='X' && spaces[3]=='X' && spaces[6]=='X') { return true;}
-    if(spaces[0]=='O' && spaces[4]=='O' && spaces[8]=='O') { return true;}
+    if(spaces[0]=='O' && spaces[3]=='O' && spaces[6]=='O') { return true;}      // 1 4 7
+    if(spaces[0]=='X' && spaces[3]=='X' && spaces[6]=='X') { return true;}      //  for x
+    if(spaces[0]=='O' && spaces[4]=='O' && spaces[8]=='O') { return true;}      // 1 5 9
     if(spaces[0]=='X' && spaces[4]=='X' && spaces[8]=='X') { return true;}
-    if(spaces[1]=='O' && spaces[4]=='O' && spaces[7]=='O') { return true;}
+    if(spaces[1]=='O' && spaces[4]=='O' && spaces[7]=='O') { return true;}      // 2 5 8
     if(spaces[1]=='X' && spaces[4]=='X' && spaces[7]=='X') { return true;}
-    if(spaces[2]=='O' && spaces[4]=='O' && spaces[6]=='O') { return true;}
+    if(spaces[2]=='O' && spaces[4]=='O' && spaces[6]=='O') { return true;}      // 3 5 7
     if(spaces[2]=='X' && spaces[4]=='X' && spaces[6]=='X') { return true;}
-    if(spaces[2]=='O' && spaces[5]=='O' && spaces[8]=='O') { return true;}
+    if(spaces[2]=='O' && spaces[5]=='O' && spaces[8]=='O') { return true;}      // 3 6 9
     if(spaces[2]=='X' && spaces[5]=='X' && spaces[8]=='X') { return true;}
+    if(spaces[0]=='O' && spaces[1]=='O' && spaces[2]=='O') { return true;}      // 3 6 9
+    if(spaces[0]=='X' && spaces[1]=='X' && spaces[2]=='X') { return true;}      // 3 6 9
+    if(spaces[3]=='O' && spaces[4]=='O' && spaces[5]=='O') { return true;}      // 3 6 9
+    if(spaces[3]=='X' && spaces[4]=='X' && spaces[5]=='X') { return true;}      // 3 6 9
+    if(spaces[6]=='O' && spaces[7]=='O' && spaces[8]=='O') { return true;}      // 3 6 9
+    if(spaces[6]=='X' && spaces[7]=='X' && spaces[8]=='X') { return true;}      // 3 6 9
     return false;
 }
